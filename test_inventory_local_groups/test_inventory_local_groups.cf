@@ -1,0 +1,9 @@
+body file control
+{
+      namespace => "test_inventory";
+}
+
+bundle agent _etc_groups
+{
+  # TEST BUNDLE CONTENT
+}

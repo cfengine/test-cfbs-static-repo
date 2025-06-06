@@ -1,0 +1,53 @@
+{
+  "name": "Test project",
+  "description": "For testing cfbs add mainly",
+  "type": "module",
+  "provides": {
+    "test-library-parsed-local-users": {
+      "name": "test-library-parsed-local-users",
+      "description": "Parse local users from /etc/passwd on the system with their attributes from /etc/shadow",
+      "repo": "https://github.com/cfengine/test-cfbs-static-repo",
+      "version": "2.0.5",
+      "subdirectory": "test_library_parsed_etc_passwd_shadow",
+      "steps": [
+        "copy ./test_library_parsed_etc_passwd_shadow.cf services/local-users/test_library_parsed_etc_passwd_shadow/",
+        "json cfbs/def.json def.json"
+      ]
+    },
+    "test-library-parsed-etc-group": {
+      "name": "test-library-parsed-etc-group",
+      "description": "Parse local group from /etc/group on the system.",
+      "repo": "https://github.com/cfengine/test-cfbs-static-repo",
+      "version": "0.0.1",
+      "subdirectory": "test_library_parsed_etc_group",
+      "steps": [
+        "copy ./test_library_parsed_etc_group.cf services/local-groups/test_library_parsed_etc_group/",
+        "json cfbs/def.json def.json"
+      ]
+    },
+    "test-inventory-local-groups": {
+      "name": "test-inventory-local-groups",
+      "description": "Inventory the local groups on the system.",
+      "repo": "https://github.com/cfengine/test-cfbs-static-repo",
+      "version": "0.0.1",
+      "subdirectory": "test_inventory_local_groups",
+      "dependencies": ["test-library-parsed-etc-group"],
+      "steps": [
+        "copy ./test_inventory_local_groups.cf services/local_groups/inventory_local_groups/",
+        "json cfbs/def.json def.json"
+      ]
+    },
+    "test-inventory-local-users": {
+      "name": "test-inventory-local-users",
+      "description": "Inventory the local users on the system with their attributes",
+      "repo": "https://github.com/cfengine/test-cfbs-static-repo",
+      "version": "2.0.4",
+      "subdirectory": "test_inventory_passwd_users_all",
+      "dependencies": ["test-library-parsed-local-users"],
+      "steps": [
+        "copy ./test_inventory_passwd_users_all.cf services/local-users/test_inventory_passwd_users_all/",
+        "json cfbs/def.json def.json"
+      ]
+    }
+  }
+}

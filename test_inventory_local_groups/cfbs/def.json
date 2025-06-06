@@ -1,0 +1,10 @@
+{
+  "vars": {
+    "control_common_bundlesequence_classification": [
+      "test_inventory:_etc_groups"
+    ]
+  },
+  "inputs": [
+    "services/local-groups/test_inventory_local_groups/test_inventory_local_groups.cf"
+  ]
+}

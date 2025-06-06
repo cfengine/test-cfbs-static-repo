@@ -1,0 +1,9 @@
+body file control
+{
+  namespace => "test_parsed";
+}
+
+bundle agent _etc_group
+{
+  # TEST BUNDLE CONTENT
+}

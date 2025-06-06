@@ -1,0 +1,8 @@
+{
+  "vars": {
+    "control_common_bundlesequence_classification": ["test_parsed:_etc_group"]
+  },
+  "inputs": [
+    "services/local-groups/test_library_parsed_etc_group/test_library_parsed_etc_group.cf"
+  ]
+}

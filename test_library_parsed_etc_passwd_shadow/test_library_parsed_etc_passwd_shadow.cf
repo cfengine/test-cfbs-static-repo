@@ -1,0 +1,4 @@
+bundle agent test_library_parsed_etc_passwd_shadow
+{
+  # TEST BUNDLE CONTENT
+}
