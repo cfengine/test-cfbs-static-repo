@@ -39,7 +39,7 @@
     },
     "test-inventory-local-users": {
       "name": "test-inventory-local-users",
-      "description": "Inventoryy the local users on the system with their attributes",
+      "description": "Inventory the local users on the system with their attributes",
       "repo": "https://github.com/cfengine/test-cfbs-static-repo",
       "version": "2.0.4",
       "subdirectory": "test_inventory_passwd_users_all",
